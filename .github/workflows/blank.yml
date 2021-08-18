@@ -20,5 +20,11 @@ jobs:
       - name: npm install
         run: npm i
 
+      - name: npm install jest
+        run: npm i jest
+
+      - name: npm install supertest
+        run: npm i supertest
+
       - name: npm test
         run: npm run test --forceExit --noStackTrace
