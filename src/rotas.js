@@ -4,6 +4,10 @@ const transacoes = require('./controladores/transacoes');
 
 const rotas = express();
 
+rotas.get('/health', (req, res) => {
+  return res.send("Server is running");
+});
+
 rotas.get('/contas', contas.listarContas);
 rotas.post('/contas', contas.criarConta);
 rotas.put('/contas/:numeroConta/usuario', contas.atualizarUsuarioConta);
